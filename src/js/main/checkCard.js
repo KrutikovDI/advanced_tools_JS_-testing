@@ -1,7 +1,6 @@
 import { checkSystem } from "./checkSystem";
 import { cardActve } from "./cardActive";
 
-
 export default class CheckingCard {
   constructor() {
     this.form = document.querySelector(".form");
@@ -38,12 +37,10 @@ export default class CheckingCard {
         this.cardNoActive();
         input.value = "";
         cardActve(checkSystem(data));
-
       } else {
         this.cardNoActive();
         input.value = "";
         alert("Номер карты неверный");
-
       }
     } else {
       input.value = "";

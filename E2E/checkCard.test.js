@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer"
 
+jest.setTimeout(30000);
 describe ('проверка номера карты', () => {
   let browser;
   let page;
@@ -31,9 +32,11 @@ describe ('проверка номера карты', () => {
 
     await input.type('4929474218674270');
     await button.click();
+    const afterArray = await page.$$('.mask')
 
     await page.waitForSelector('#visa.card');
-  }, 40000);
+    expect(afterArray.length).toBe(5);
+  });
 
   afterEach(async () => {
     await browser.close();

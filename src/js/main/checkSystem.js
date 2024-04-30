@@ -1,4 +1,3 @@
-
 export function checkSystem(data) {
   if (
     data.length == 15 &&
