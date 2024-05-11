@@ -9,6 +9,6 @@ test("проверяем отсутствие класса 'mask' у элеме�
     </div>
   </div>`;
   cardActve("Discover");
-  const exam = document.querySelector("#Discover")
+  const exam = document.getElementById("Discover")
   expect(exam.classList.contains("mask")).toEqual(false);
 });
